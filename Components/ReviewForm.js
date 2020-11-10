@@ -40,6 +40,10 @@ app.component('review-form', {
 
 	methods: {
 		onSubmit() {
+			if (this.name === '' || this.review === '' || this.rating === null) {
+				alert('review is incomplete you stupid idiot. Please fill out every field. I mean god, you so stupid.');
+				return;
+			}
 			let productReview = {
 				name: this.name,
 				review: this.review,
