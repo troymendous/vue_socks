@@ -37,9 +37,9 @@ app.component('product-display', {
 			v-on:click="addToCart">
 			Add to Cart
 		  </button>
+  
 		</div>
 	  </div>
-	  <review-list v-if="reviews.length" :reviews="reviews"></review-list>
 	  <review-form @review-submitted="addReview"></review-form>
 	</div>`,
 	data() {
@@ -63,7 +63,7 @@ app.component('product-display', {
 			this.selectedVariant = index;
 		},
 		addReview(review) {
-			this.reviews.push(review);
+			this.review.push(review);
 		}
 	},
 	computed: {
